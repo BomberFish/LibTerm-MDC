@@ -145,7 +145,7 @@ class SettingsTableViewController: UITableViewController, SKStoreProductViewCont
         case ProjectsIndexPaths.other:
             projectPath = "ColdGrub1384/LibTerm/blob/master/PYTHON_ACKNOWLEDGMENTS.md"
         case ProjectsIndexPaths.libTerm:
-            projectPath = "ColdGrub1384/LibTerm"
+            projectPath = "BomberFish/LibTerm-MDC"
         case ProjectsIndexPaths.seeless:
             present(appWithID: "1481018071")
         case ProjectsIndexPaths.pyto:

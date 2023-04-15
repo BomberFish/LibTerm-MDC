@@ -1,8 +1,9 @@
 Made by Adrian Labbé.
 Main idea by Louis D'hauwe.
+Unsandboxing by BomberFish.
 This is not a fork of OpenTerm, the code is rewritten.
-LibTerm is open source.
-BOLDgithub.com/ColdGrub1384/LibTermPLAIN
+LibTerm-MDC is open source.
+BOLDgithub.com/BomberFish/LibTerm-MDCPLAIN
 
 A big thanks to Nicolas Holzschuch (github.com/holzschu) for making this project possible by compiling commands.
 

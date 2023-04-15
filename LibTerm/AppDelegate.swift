@@ -93,41 +93,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func unsandbox_mdc() {
+        if #available(iOS 16.2, *) {
+            UIApplication.shared.alert(title: "Not Supported", body: "This version of iOS is not supported.")
+        } else {
+            do {
+                // TrollStore method
+                try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: "/var/mobile/Library/Caches"), includingPropertiesForKeys: nil)
+            } catch {
+                // MDC method
+                // grant r/w access
+                print(error.localizedDescription)
+                if #available(iOS 15, *) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                        do {
+                            try MacDirtyCow.unsandbox()
+                            print("WE ARE UNSANDBOXED!")
+                        } catch {
+                            print(error.localizedDescription)
+                            UIApplication.shared.alert(body: "Unsandboxing Error: \(error.localizedDescription)\nPlease close the app and retry. If the problem persists, reboot your device.", withButton: false)
+                        }
+                    }
+                } else {
+                    UIApplication.shared.alert(title: "MDC Not Supported", body: "Please install via TrollStore")
+                }
+            }
+        }
+    }
+    
     // MARK: - Application delegate
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-#if targetEnvironment(simulator)
-#else
-                    if #available(iOS 16.2, *) {
-                        UIApplication.shared.alert(title: "Not Supported", body: "This version of iOS is not supported.")
-                    } else {
-                        do {
-                            if UserDefaults.standard.bool(forKey: "ForceMDC") == true {
-                                throw "Forcing MDC"
-                            }
-                            // TrollStore method
-                            try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: "/var/mobile/Library/Caches"), includingPropertiesForKeys: nil)
-                        } catch {
-                            // MDC method
-                            // grant r/w access
-                            print(error.localizedDescription)
-                            if #available(iOS 15, *) {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                                    do {
-                                        try MacDirtyCow.unsandbox()
-                                    } catch {
-                                        UIApplication.shared.alert(body: "Unsandboxing Error: \(error.localizedDescription)\nPlease close the app and retry. If the problem persists, reboot your device.", withButton: false)
-                                    }
-                                }
-                            } else {
-                                UIApplication.shared.alert(title: "MDC Not Supported", body: "Please install via TrollStore")
-                            }
-                        }
-                    }
-#endif
         
         if #available(iOS 13.0, *) {
         } else {
@@ -188,6 +186,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 try? FileManager.default.createSymbolicLink(at: localBinURL, withDestinationURL: binURL)
             }
         }
+        
+        // unsandbox
+        
+        #if targetEnvironment(simulator)
+        #else
+        unsandbox_mdc()
+        #endif
         
         // ios_system
         
