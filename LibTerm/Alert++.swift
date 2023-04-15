@@ -30,7 +30,7 @@ extension UIApplication {
                 // append debug info
                 let device = UIDevice.current
                 let systemVersion = device.systemVersion
-                body += "\n\n\(device.systemName) \(systemVersion), Flash version \(appVersion) escaped=\(FileManager.default.isReadableFile(atPath: "/var/mobile"))"
+                body += "\n\n\(device.systemName) \(systemVersion) escaped=\(FileManager.default.isReadableFile(atPath: "/var/mobile"))"
             }
             
             currentUIAlertController = UIAlertController(title: title, message: body, preferredStyle: .alert)
