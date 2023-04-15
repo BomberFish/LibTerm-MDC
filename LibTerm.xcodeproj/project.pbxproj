@@ -107,6 +107,7 @@
 		C9E068F4226257C700A1DE86 /* Python_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9E068F1226257AB00A1DE86 /* Python_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6E6CF5A29EB39DD009FC842 /* DirtyCowKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6E6CF5929EB39DD009FC842 /* DirtyCowKit */; };
 		D6E6CF5C29EB3AFA009FC842 /* Alert++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */; };
+		D6E6CF5E29EB43A5009FC842 /* unsandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6CF5D29EB43A5009FC842 /* unsandbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,6 +420,7 @@
 		C9FAD8FB216AD24B005939AC /* LibTermCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibTermCore.h; sourceTree = "<group>"; };
 		C9FAD8FC216AD24B005939AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert++.swift"; sourceTree = "<group>"; };
+		D6E6CF5D29EB43A5009FC842 /* unsandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsandbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				C91C345821612DBA0003BD90 /* clear.swift */,
+				D6E6CF5D29EB43A5009FC842 /* unsandbox.swift */,
 				C91C345A21613A720003BD90 /* help.swift */,
 				C9E771D521C7EB9E00C56FEE /* credits.swift */,
 				C9CB2CDC216971EE004D9FFB /* exit.swift */,
@@ -1086,6 +1089,7 @@
 				C995063F21F3A23600C0D1BB /* LibShell.swift in Sources */,
 				C995064021F3A23600C0D1BB /* Commands.swift in Sources */,
 				C995065021F3A24600C0D1BB /* Keys.swift in Sources */,
+				D6E6CF5E29EB43A5009FC842 /* unsandbox.swift in Sources */,
 				C995064E21F3A24000C0D1BB /* SettingsTableViewController.swift in Sources */,
 				D6E6CF5C29EB3AFA009FC842 /* Alert++.swift in Sources */,
 				C995064321F3A23B00C0D1BB /* credits.swift in Sources */,

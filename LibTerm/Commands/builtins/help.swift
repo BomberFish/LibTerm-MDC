@@ -83,7 +83,11 @@ func helpMain(argc: Int, argv: [String], io: LTIO) -> Int32 {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
-        fputs("\n\nRestored on \(formatter.string(from: Date()))\n\n", io.stdout)
+        if FileManager.default.isReadableFile(atPath: "/var/mobile") {
+            fputs("\n\nRestored on \(formatter.string(from: Date()))\nUnsandboxed.\n\n", io.stdout)
+        } else {
+            fputs("\n\nRestored on \(formatter.string(from: Date()))\nNot unsandboxed.\n\n", io.stdout)
+        }
         return 0
     }
     
@@ -114,7 +118,11 @@ func helpMain(argc: Int, argv: [String], io: LTIO) -> Int32 {
             formatter.timeStyle = .short
             
             helpText = helpText.replacingOccurrences(of: "\n", with: "")
-            helpText += "\nLast login: \(formatter.string(from: lastLogin))\n"
+            if FileManager.default.isReadableFile(atPath: "/var/mobile") {
+                helpText += "\nLast login: \(formatter.string(from: lastLogin))\nUnsandboxed.\n\n"
+            } else {
+                helpText += "\nLast login: \(formatter.string(from: lastLogin))\nNot unsandboxed.\n\n"
+            }
         }
         fputs(helpText, io.stdout)
         return 0

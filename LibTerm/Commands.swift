@@ -28,6 +28,7 @@ public var LTHelp: [LTCommandHelp] = {
         }
         commands.append(commandHelp)
     }
+    commands.append(LTCommandHelp(commandName: "unsandbox", commandInput: .none))
     commands.append(LTCommandHelp(commandName: "clear", commandInput: .none))
     commands.append(LTCommandHelp(commandName: "sh", commandInput: .file))
     commands.append(LTCommandHelp(commandName: "help", commandInput: .none))

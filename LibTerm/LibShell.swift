@@ -252,14 +252,14 @@ open class LibShell {
     
     /// Builtin commands per name and functions.
     open var builtins: [String:LTCommand] {
-        var commands = ["clear" : clearMain, "help" : helpMain, "sh" : libshellMain, "exit" : exitMain, "open" : openMain, "credits" : creditsMain, "jsc": jscMain]
+        var commands = ["unsandbox" : unsandboxMain,"clear" : clearMain, "help" : helpMain, "sh" : libshellMain, "exit" : exitMain, "open" : openMain, "credits" : creditsMain, "jsc": jscMain]
         #if !FRAMEWORK
             commands["package"] = packageMain
             commands["edit"] = editMain
         #endif
-        #if targetEnvironment(simulator)
+        //#if targetEnvironment(simulator)
         commands["screenshot"] = screenshotMain
-        #endif
+        //#endif
         return commands
     }
     
