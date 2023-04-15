@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,6 +107,8 @@
 		C9CABCDB21F3ACA6002DB86C /* bc_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CABCDA21F3AC9A002DB86C /* bc_ios.framework */; };
 		C9CABCDC21F3ACA6002DB86C /* bc_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9CABCDA21F3AC9A002DB86C /* bc_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9E068F4226257C700A1DE86 /* Python_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9E068F1226257AB00A1DE86 /* Python_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6E6CF5A29EB39DD009FC842 /* DirtyCowKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6E6CF5929EB39DD009FC842 /* DirtyCowKit */; };
+		D6E6CF5C29EB3AFA009FC842 /* Alert++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,9 +444,9 @@
 		C9F0F004216437BB00CAC2A0 /* InputAssistant.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InputAssistant.xcodeproj; path = InputAssistant/InputAssistant.xcodeproj; sourceTree = "<group>"; };
 		C9F0F01721654DBD00CAC2A0 /* TabView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TabView.xcodeproj; path = TabView/TabView.xcodeproj; sourceTree = "<group>"; };
 		C9F0F02921654F2B00CAC2A0 /* TerminalTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalTabViewController.swift; sourceTree = "<group>"; };
-		C9F6CB472337D9AC00BE9935 /* LibTerm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LibTerm.entitlements; sourceTree = "<group>"; };
 		C9FAD8FB216AD24B005939AC /* LibTermCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibTermCore.h; sourceTree = "<group>"; };
 		C9FAD8FC216AD24B005939AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert++.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +476,7 @@
 				C98621D5231B6C0C003408B8 /* openblas.framework in Frameworks */,
 				C9CABCBD21F3A32A002DB86C /* libbz2.tbd in Frameworks */,
 				C9425A3421F3B46D00E7CC35 /* libssh2.framework in Frameworks */,
+				D6E6CF5A29EB39DD009FC842 /* DirtyCowKit in Frameworks */,
 				C995060E21F3A17E00C0D1BB /* ObjectUserDefaults.framework in Frameworks */,
 				C995061221F3A18100C0D1BB /* TabView.framework in Frameworks */,
 				C98621CF231B6B6C003408B8 /* freetype.framework in Frameworks */,
@@ -604,8 +607,8 @@
 		C9806BC32160467E00F870B5 /* LibTerm */ = {
 			isa = PBXGroup;
 			children = (
-				C9F6CB472337D9AC00BE9935 /* LibTerm.entitlements */,
 				C9806BC42160467E00F870B5 /* AppDelegate.swift */,
+				D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */,
 				C965C4D72300742B00CAA88B /* SceneDelegate.swift */,
 				C9806D0221604A3900F870B5 /* LibShell.swift */,
 				C927793821696CC00091B038 /* Commands.swift */,
@@ -850,6 +853,9 @@
 				C97DE9A62348E89A0050560A /* PBXTargetDependency */,
 			);
 			name = LibTerm;
+			packageProductDependencies = (
+				D6E6CF5929EB39DD009FC842 /* DirtyCowKit */,
+			);
 			productName = Terminal;
 			productReference = C99505F721F3A12200C0D1BB /* LibTerm.app */;
 			productType = "com.apple.product-type.application";
@@ -884,6 +890,9 @@
 				Base,
 			);
 			mainGroup = C9806BB82160467E00F870B5;
+			packageReferences = (
+				D6E6CF5829EB39DD009FC842 /* XCRemoteSwiftPackageReference "DirtyCowKit" */,
+			);
 			productRefGroup = C9806BC22160467E00F870B5 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -1109,6 +1118,7 @@
 				C995064021F3A23600C0D1BB /* Commands.swift in Sources */,
 				C995065021F3A24600C0D1BB /* Keys.swift in Sources */,
 				C995064E21F3A24000C0D1BB /* SettingsTableViewController.swift in Sources */,
+				D6E6CF5C29EB3AFA009FC842 /* Alert++.swift in Sources */,
 				C995064321F3A23B00C0D1BB /* credits.swift in Sources */,
 				C97DE9B82348E8C20050560A /* Intents.intentdefinition in Sources */,
 				C995065321F3A24600C0D1BB /* Parser.swift in Sources */,
@@ -1419,10 +1429,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_ENTITLEMENTS = LibTerm/LibTerm.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = Y96PL6G497;
+				DEVELOPMENT_TEAM = 8JKVMYCRTJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1432,7 +1442,8 @@
 				);
 				HEADER_SEARCH_PATHS = /System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7;
 				INFOPLIST_FILE = "$(SRCROOT)/LibTerm/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = Unsandboxing;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1443,7 +1454,7 @@
 					"$(PROJECT_DIR)/llvm",
 				);
 				MARKETING_VERSION = 5.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.marcela.ada.LibTerm;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.LibTermMDC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_STYLE = "non-global";
 				SWIFT_OBJC_BRIDGING_HEADER = "LibTerm/LibTerm-Bridging-Header.h";
@@ -1460,10 +1471,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_ENTITLEMENTS = LibTerm/LibTerm.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = Y96PL6G497;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1473,7 +1484,8 @@
 				);
 				HEADER_SEARCH_PATHS = /System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7;
 				INFOPLIST_FILE = "$(SRCROOT)/LibTerm/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = Unsandboxing;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1533,6 +1545,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6E6CF5829EB39DD009FC842 /* XCRemoteSwiftPackageReference "DirtyCowKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BomberFish/DirtyCowKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6E6CF5929EB39DD009FC842 /* DirtyCowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E6CF5829EB39DD009FC842 /* XCRemoteSwiftPackageReference "DirtyCowKit" */;
+			productName = DirtyCowKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9806BB92160467E00F870B5 /* Project object */;
 }

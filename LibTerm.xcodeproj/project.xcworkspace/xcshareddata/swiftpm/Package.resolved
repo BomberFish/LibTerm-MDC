@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "dirtycowkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BomberFish/DirtyCowKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c392212bb0966089a73de4c0622cbd94a430ae20"
+      }
+    }
+  ],
+  "version" : 2
+}
