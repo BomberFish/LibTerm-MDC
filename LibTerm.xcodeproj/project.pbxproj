@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -105,9 +105,17 @@
 		C9CABCDB21F3ACA6002DB86C /* bc_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CABCDA21F3AC9A002DB86C /* bc_ios.framework */; };
 		C9CABCDC21F3ACA6002DB86C /* bc_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9CABCDA21F3AC9A002DB86C /* bc_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9E068F4226257C700A1DE86 /* Python_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9E068F1226257AB00A1DE86 /* Python_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D6E6CF5A29EB39DD009FC842 /* DirtyCowKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6E6CF5929EB39DD009FC842 /* DirtyCowKit */; };
+		D6CB37812B1A6D3D00627932 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB377B2B1A6D3C00627932 /* grant_full_disk_access.m */; };
+		D6CB37822B1A6D3D00627932 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = D6CB377D2B1A6D3C00627932 /* vm_unaligned_copy_switch_race.c */; };
+		D6CB37832B1A6D3D00627932 /* jit.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB37802B1A6D3D00627932 /* jit.m */; };
+		D6CB37882B1A708600627932 /* TSSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB37852B1A708500627932 /* TSSwift.swift */; };
+		D6CB37892B1A708600627932 /* TSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB37872B1A708600627932 /* TSUtil.m */; };
+		D6CB378B2B1A871800627932 /* spawnRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB378A2B1A871800627932 /* spawnRoot.swift */; };
+		D6CB378D2B1A87E500627932 /* overwriteMDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB378C2B1A87E500627932 /* overwriteMDC.swift */; };
+		D6CB37902B1AA2C300627932 /* String+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB378F2B1AA2C300627932 /* String+LocalizedError.swift */; };
+		D6CB37932B1AA4FB00627932 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB37912B1AA4FB00627932 /* helpers.m */; };
 		D6E6CF5C29EB3AFA009FC842 /* Alert++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */; };
-		D6E6CF5E29EB43A5009FC842 /* unsandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6CF5D29EB43A5009FC842 /* unsandbox.swift */; };
+		D6E6CF5E29EB43A5009FC842 /* unsandboxMDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6CF5D29EB43A5009FC842 /* unsandboxMDC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,8 +427,25 @@
 		C9F0F02921654F2B00CAC2A0 /* TerminalTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalTabViewController.swift; sourceTree = "<group>"; };
 		C9FAD8FB216AD24B005939AC /* LibTermCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibTermCore.h; sourceTree = "<group>"; };
 		C9FAD8FC216AD24B005939AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6CB37792B1A69CE00627932 /* TS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TS.entitlements; sourceTree = "<group>"; };
+		D6CB377B2B1A6D3C00627932 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = grant_full_disk_access.m; path = ../../../Picasso/Picasso/Exploit/MacDirtyCowSwift/Exploit/grant_full_disk_access.m; sourceTree = "<group>"; };
+		D6CB377C2B1A6D3C00627932 /* jit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jit.h; path = ../../../Picasso/Picasso/Exploit/MacDirtyCowSwift/Exploit/jit.h; sourceTree = "<group>"; };
+		D6CB377D2B1A6D3C00627932 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vm_unaligned_copy_switch_race.c; path = ../../../Picasso/Picasso/Exploit/MacDirtyCowSwift/Exploit/vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
+		D6CB377E2B1A6D3C00627932 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vm_unaligned_copy_switch_race.h; path = ../../../Picasso/Picasso/Exploit/MacDirtyCowSwift/Exploit/vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
+		D6CB377F2B1A6D3D00627932 /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grant_full_disk_access.h; path = ../../../Picasso/Picasso/Exploit/MacDirtyCowSwift/Exploit/grant_full_disk_access.h; sourceTree = "<group>"; };
+		D6CB37802B1A6D3D00627932 /* jit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = jit.m; path = ../../../Picasso/Picasso/Exploit/MacDirtyCowSwift/Exploit/jit.m; sourceTree = "<group>"; };
+		D6CB37842B1A6F7000627932 /* LibTerm-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LibTerm-Bridging-Header.h"; sourceTree = "<group>"; };
+		D6CB37852B1A708500627932 /* TSSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSSwift.swift; sourceTree = "<group>"; };
+		D6CB37862B1A708500627932 /* TSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUtil.h; sourceTree = "<group>"; };
+		D6CB37872B1A708600627932 /* TSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUtil.m; sourceTree = "<group>"; };
+		D6CB378A2B1A871800627932 /* spawnRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spawnRoot.swift; sourceTree = "<group>"; };
+		D6CB378C2B1A87E500627932 /* overwriteMDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overwriteMDC.swift; sourceTree = "<group>"; };
+		D6CB378E2B1A8D0A00627932 /* CoreServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreServices.h; sourceTree = "<group>"; };
+		D6CB378F2B1AA2C300627932 /* String+LocalizedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LocalizedError.swift"; sourceTree = "<group>"; };
+		D6CB37912B1AA4FB00627932 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpers.m; sourceTree = "<group>"; };
+		D6CB37922B1AA4FB00627932 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
 		D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert++.swift"; sourceTree = "<group>"; };
-		D6E6CF5D29EB43A5009FC842 /* unsandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsandbox.swift; sourceTree = "<group>"; };
+		D6E6CF5D29EB43A5009FC842 /* unsandboxMDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsandboxMDC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,7 +475,6 @@
 				C98621D5231B6C0C003408B8 /* openblas.framework in Frameworks */,
 				C9CABCBD21F3A32A002DB86C /* libbz2.tbd in Frameworks */,
 				C9425A3421F3B46D00E7CC35 /* libssh2.framework in Frameworks */,
-				D6E6CF5A29EB39DD009FC842 /* DirtyCowKit in Frameworks */,
 				C995060E21F3A17E00C0D1BB /* ObjectUserDefaults.framework in Frameworks */,
 				C995061221F3A18100C0D1BB /* TabView.framework in Frameworks */,
 				C98621CF231B6B6C003408B8 /* freetype.framework in Frameworks */,
@@ -500,7 +524,9 @@
 			isa = PBXGroup;
 			children = (
 				C91C345821612DBA0003BD90 /* clear.swift */,
-				D6E6CF5D29EB43A5009FC842 /* unsandbox.swift */,
+				D6E6CF5D29EB43A5009FC842 /* unsandboxMDC.swift */,
+				D6CB378A2B1A871800627932 /* spawnRoot.swift */,
+				D6CB378C2B1A87E500627932 /* overwriteMDC.swift */,
 				C91C345A21613A720003BD90 /* help.swift */,
 				C9E771D521C7EB9E00C56FEE /* credits.swift */,
 				C9CB2CDC216971EE004D9FFB /* exit.swift */,
@@ -550,6 +576,7 @@
 		C9806BB82160467E00F870B5 = {
 			isa = PBXGroup;
 			children = (
+				D6CB37792B1A69CE00627932 /* TS.entitlements */,
 				C90D8158232C3D85002F48D2 /* ZipArchive.xcodeproj */,
 				C9CABCD521F3AC9A002DB86C /* bc_ios.xcodeproj */,
 				C95BE11A21A379F900FB135B /* ios_system.xcodeproj */,
@@ -583,7 +610,10 @@
 			isa = PBXGroup;
 			children = (
 				C9806BC42160467E00F870B5 /* AppDelegate.swift */,
+				D6CB37842B1A6F7000627932 /* LibTerm-Bridging-Header.h */,
+				D6CB377A2B1A6D0B00627932 /* Exploits */,
 				D6E6CF5B29EB3AFA009FC842 /* Alert++.swift */,
+				D6CB378F2B1AA2C300627932 /* String+LocalizedError.swift */,
 				C965C4D72300742B00CAA88B /* SceneDelegate.swift */,
 				C9806D0221604A3900F870B5 /* LibShell.swift */,
 				C927793821696CC00091B038 /* Commands.swift */,
@@ -767,6 +797,25 @@
 			path = LibTermCore;
 			sourceTree = "<group>";
 		};
+		D6CB377A2B1A6D0B00627932 /* Exploits */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB37852B1A708500627932 /* TSSwift.swift */,
+				D6CB378E2B1A8D0A00627932 /* CoreServices.h */,
+				D6CB37862B1A708500627932 /* TSUtil.h */,
+				D6CB37872B1A708600627932 /* TSUtil.m */,
+				D6CB37922B1AA4FB00627932 /* helpers.h */,
+				D6CB37912B1AA4FB00627932 /* helpers.m */,
+				D6CB377F2B1A6D3D00627932 /* grant_full_disk_access.h */,
+				D6CB377B2B1A6D3C00627932 /* grant_full_disk_access.m */,
+				D6CB377C2B1A6D3C00627932 /* jit.h */,
+				D6CB37802B1A6D3D00627932 /* jit.m */,
+				D6CB377D2B1A6D3C00627932 /* vm_unaligned_copy_switch_race.c */,
+				D6CB377E2B1A6D3C00627932 /* vm_unaligned_copy_switch_race.h */,
+			);
+			path = Exploits;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -826,7 +875,6 @@
 			);
 			name = LibTerm;
 			packageProductDependencies = (
-				D6E6CF5929EB39DD009FC842 /* DirtyCowKit */,
 			);
 			productName = Terminal;
 			productReference = C99505F721F3A12200C0D1BB /* LibTerm.app */;
@@ -863,7 +911,6 @@
 			);
 			mainGroup = C9806BB82160467E00F870B5;
 			packageReferences = (
-				D6E6CF5829EB39DD009FC842 /* XCRemoteSwiftPackageReference "DirtyCowKit" */,
 			);
 			productRefGroup = C9806BC22160467E00F870B5 /* Products */;
 			projectDirPath = "";
@@ -1082,35 +1129,44 @@
 			files = (
 				C995065221F3A24600C0D1BB /* CommandHelp.swift in Sources */,
 				C90ADD5A2324347F001F0E69 /* screenshot.swift in Sources */,
+				D6CB37822B1A6D3D00627932 /* vm_unaligned_copy_switch_race.c in Sources */,
 				C995064C21F3A24000C0D1BB /* TerminalViewController.swift in Sources */,
+				D6CB37902B1AA2C300627932 /* String+LocalizedError.swift in Sources */,
 				C918BFEF244F385700FD09F2 /* jsc.swift in Sources */,
 				C995064821F3A23B00C0D1BB /* package.swift in Sources */,
 				C995065121F3A24600C0D1BB /* IO.swift in Sources */,
 				C995063F21F3A23600C0D1BB /* LibShell.swift in Sources */,
+				D6CB378D2B1A87E500627932 /* overwriteMDC.swift in Sources */,
 				C995064021F3A23600C0D1BB /* Commands.swift in Sources */,
 				C995065021F3A24600C0D1BB /* Keys.swift in Sources */,
-				D6E6CF5E29EB43A5009FC842 /* unsandbox.swift in Sources */,
+				D6E6CF5E29EB43A5009FC842 /* unsandboxMDC.swift in Sources */,
 				C995064E21F3A24000C0D1BB /* SettingsTableViewController.swift in Sources */,
 				D6E6CF5C29EB3AFA009FC842 /* Alert++.swift in Sources */,
 				C995064321F3A23B00C0D1BB /* credits.swift in Sources */,
 				C97DE9B82348E8C20050560A /* Intents.intentdefinition in Sources */,
+				D6CB37832B1A6D3D00627932 /* jit.m in Sources */,
 				C995065321F3A24600C0D1BB /* Parser.swift in Sources */,
 				C995063E21F3A23600C0D1BB /* AppDelegate.swift in Sources */,
 				C965C4CE22FFA3B000CAA88B /* id.c in Sources */,
 				C995064721F3A23B00C0D1BB /* open.swift in Sources */,
+				D6CB37892B1A708600627932 /* TSUtil.m in Sources */,
 				C995064921F3A23B00C0D1BB /* edit.swift in Sources */,
+				D6CB37882B1A708600627932 /* TSSwift.swift in Sources */,
 				C965C4D82300742B00CAA88B /* SceneDelegate.swift in Sources */,
 				C995065921F3A24D00C0D1BB /* TerminalTextView.swift in Sources */,
 				C995065521F3A24600C0D1BB /* BuildDate.swift in Sources */,
+				D6CB378B2B1A871800627932 /* spawnRoot.swift in Sources */,
 				C995064F21F3A24600C0D1BB /* String.swift in Sources */,
 				C965C4C622FFA33600CAA88B /* pbpaste+pbcopy.swift in Sources */,
 				C995064221F3A23B00C0D1BB /* clear.swift in Sources */,
 				C995064D21F3A24000C0D1BB /* TerminalTabViewController.swift in Sources */,
 				C995065621F3A24600C0D1BB /* GithubFile.swift in Sources */,
 				C995064421F3A23B00C0D1BB /* help.swift in Sources */,
+				D6CB37812B1A6D3D00627932 /* grant_full_disk_access.m in Sources */,
 				C995064621F3A23B00C0D1BB /* exit.swift in Sources */,
 				C995064121F3A23600C0D1BB /* ReviewHelper.swift in Sources */,
 				C995065421F3A24600C0D1BB /* ANSITextState.swift in Sources */,
+				D6CB37932B1AA4FB00627932 /* helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1407,7 +1463,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LibTerm/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = Unsandboxing;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1450,7 +1506,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LibTerm/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = Unsandboxing;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1510,25 +1566,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D6E6CF5829EB39DD009FC842 /* XCRemoteSwiftPackageReference "DirtyCowKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BomberFish/DirtyCowKit";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D6E6CF5929EB39DD009FC842 /* DirtyCowKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6E6CF5829EB39DD009FC842 /* XCRemoteSwiftPackageReference "DirtyCowKit" */;
-			productName = DirtyCowKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9806BB92160467E00F870B5 /* Project object */;
 }

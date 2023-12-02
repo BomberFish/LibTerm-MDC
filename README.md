@@ -1,6 +1,6 @@
-# LibTerm
+# LibTerm-TS
 
-LibTerm is a terminal for iOS with Python 3.7 and Lua 5.3. Supports iOS 13 dark mode and multi window.
+LibTerm-TS is an unsandboxed terminal for iOS (TrollStore only) with Python 3.7 and Lua 5.3. Supports iOS 13 dark mode and multi window.
 
 [![Download on the App Store](https://pisth.github.io/appstorebadge.svg)](https://itunes.apple.com/us/app/libterm/id1380911705?ls=1&mt=8)
 
@@ -20,6 +20,10 @@ LibTerm contains a `package` command. With `package`, you can download and insta
 
 1. `$ ./setup.sh`
 2. Build `LibTerm` or `LibTermCore` target from `LibTerm.xcodeproj`
+
+## Update: Xcode 14.3+
+
+Building is currently broken on stock Xcode 14.3+. You need to first patch your Xcode installation to include some extra files, available [here](https://github.com/kamyarelyasi/Libarclite-Files).
 
 # Acknowledgments
 

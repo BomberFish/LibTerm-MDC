@@ -13,7 +13,6 @@ import ObjectUserDefaults
 import StoreKit
 import ZipArchive
 import Darwin
-import MacDirtyCow
 
 /// A Tab View theme that adapts to the system appearance.
 @available(iOS 13.0, *) class DefaultTheme: TabViewTheme {
@@ -106,12 +105,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
                 if #available(iOS 15, *) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        do {
-                            try MacDirtyCow.unsandbox()
-                            print("WE ARE UNSANDBOXED!")
-                        } catch {
-                            print(error.localizedDescription)
-                            UIApplication.shared.alert(body: "Unsandboxing Error: \(error.localizedDescription)\nPlease close the app and retry. If the problem persists, reboot your device.", withButton: false)
+                        grant_full_disk_access() {error in
+                            if error != nil {
+                                UIApplication.shared.alert(body: "Unsandboxing Error: \(error!.localizedDescription)\nPlease close the app and retry. If the problem persists, reboot your device.", withButton: false)
+                            } else {
+                                print("WE ARE UNSANDBOXED!")
+                            }
                         }
                     }
                 } else {
